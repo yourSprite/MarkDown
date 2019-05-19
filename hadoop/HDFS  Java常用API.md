@@ -11,6 +11,8 @@
 | org.apache.hadoop.fs.permission.FsPermission | 文件或者目录的权限                                           |
 | org.apache.hadoop.conf.Configuration         | 访问配置项。所有的配置项的值，如果没有专门配置，以core-default.xml为准；否则，以core-site.xml中的配置为准 |
 
+> 备注：创建一个Configuration对象时，其构造方法会默认加载工程项目下两个配置文件，分别是hdfs-site.xml以及core-site.xml，这两个文件中会有访问HDFS所需的参数值，主要是fs.defaultFS，指定了HDFS的地址(比如hdfs://localhost:9000)，有了这个地址客户端就可以通过这个地址访问HDFS了。
+
 常用操作
 
 ```java
